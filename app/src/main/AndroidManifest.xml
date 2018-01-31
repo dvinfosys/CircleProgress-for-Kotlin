@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="net.dvinfosys.circleprogress">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".App.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".App.ViewPagerActivity" />
+        <activity
+            android:name=".App.ItemListActivity"
+            android:label="@string/title_item_list" >
+        </activity>
+        <activity
+            android:name=".App.ItemDetailActivity"
+            android:label="@string/title_item_detail"
+            android:parentActivityName=".App.ItemListActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".App.ItemListActivity" />
+        </activity>
+
+        <activity
+            android:name=".App.ArcInFragment"
+            android:label="@string/title_activity_arc_in_fragment" >
+        </activity>
+
+    </application>
+
+</manifest>
